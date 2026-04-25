@@ -25,12 +25,6 @@ Shiksha Sathi is an intelligent tutoring system designed to help Indian students
 - **Multiple Choice Questions**: 5, 10, or 15 questions per quiz
 - **Instant Feedback**: Get correct answers with explanations after completion
 
-### 🎤 Voice Support (Experimental)
-- **Speech-to-Text**: Ask questions by speaking (supports 22+ Indian languages)
-- **Text-to-Speech**: Listen to answers read aloud
-- **Multilingual**: Hindi, English, Tamil, Telugu, and more
-- **Sovereign Architecture**: 100% India-hosted voice pipeline (Sarvam AI)
-
 ---
 
 ## 🏗️ Architecture
@@ -73,11 +67,6 @@ Shiksha Sathi is an intelligent tutoring system designed to help Indian students
    - Sarvam AI chat completions API
    - Context-aware prompt engineering
    - Response parsing with thinking tags support
-
-4. **Voice Pipeline** (Optional)
-   - STT: Sarvam Saaras v3
-   - TTS: Sarvam Bulbul v2
-   - Language detection and routing
 
 ---
 
@@ -209,15 +198,6 @@ os.environ["SARVAM_API_KEY"] = dbutils.secrets.get(scope="ncert-tutor", key="sar
 4. Click **Generate Quiz**
 5. Answer questions and click **Show Answers** to check
 
-### Voice Mode (if enabled)
-
-1. Navigate to **Voice** tab
-2. Click **🎙 Record** to start recording
-3. Ask your question (in any supported Indian language)
-4. Click **⏹ Stop** when done
-5. Click **Send Voice** to process
-6. Listen to the audio response (auto-plays)
-
 ---
 
 ## 🔧 Configuration
@@ -227,7 +207,6 @@ os.environ["SARVAM_API_KEY"] = dbutils.secrets.get(scope="ncert-tutor", key="sar
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
 | `SARVAM_API_KEY` | ✅ Yes | - | Sarvam AI API key |
-| `NYAYA_INDEX_DIR` | ❌ No | `./index` | Path to FAISS index directory |
 | `DATABRICKS_TOKEN` | ❌ No | Auto | Databricks auth token (auto-detected) |
 | `DATABRICKS_HOST` | ❌ No | Auto | Databricks workspace URL (auto-detected) |
 
@@ -235,12 +214,9 @@ os.environ["SARVAM_API_KEY"] = dbutils.secrets.get(scope="ncert-tutor", key="sar
 
 **Classes**: 5, 6, 7, 8  
 **Subjects**: 
-- Social Science (History, Geography, Civics)
-- Science (Physics, Chemistry, Biology)
-- English (Literature, Grammar)
-
-**Languages** (Voice):
-- Hindi, English, Tamil, Telugu, Kannada, Malayalam, Bengali, Gujarati, Marathi, Punjabi, Odia
+- Social Science
+- Science 
+- English 
 
 ---
 
@@ -313,7 +289,6 @@ os.environ["SARVAM_API_KEY"] = "your-api-key-here"
 - **Retrieval Latency**: ~50-200ms (FAISS search)
 - **LLM Response Time**: ~2-5s (Sarvam AI)
 - **Quiz Generation**: ~5-10s (depends on number of questions)
-- **Voice Latency**: ~1-3s (STT + TTS combined)
 
 ---
 
@@ -352,6 +327,3 @@ For issues or questions:
 ---
 
 **Built with ❤️ for Indian Students**
-EOF
-
-echo "✅ README.md created successfully"
