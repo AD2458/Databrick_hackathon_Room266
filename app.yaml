@@ -1,0 +1,7 @@
+command: ["python", "app.py"]
+
+env:
+  - name: SARVAM_API_KEY
+    valueFrom: sarvam_secret
+  - name: NCERT_VOLUME_PATH
+    value: '/Volumes/workspace/default/ncert-tutor'
