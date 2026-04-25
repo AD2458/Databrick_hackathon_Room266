@@ -1,0 +1,13 @@
+{
+  "embedding_model": "distiluse-base-multilingual-cased-v2",
+  "embedding_dim": 512,
+  "faiss_index_file": "corpus.faiss",
+  "chunks_parquet_file": "chunks.parquet",
+  "num_vectors": 10437,
+  "catalog": "workspace",
+  "schema": "default",
+  "source_table": "ncert_chunks",
+  "created_at_utc": "2026-04-25T05:43:31Z",
+  "normalize_embeddings": true,
+  "metric": "inner_product"
+}
